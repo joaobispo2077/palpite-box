@@ -46,8 +46,8 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Next.js](https://nextjs.org)
-        - [React.js](https://reactjs.org)
-        - [Node.js](https://nodejs.org/en/)
+    - [React.js](https://reactjs.org)
+            - [Node.js](https://nodejs.org/en/)
 
 
 ## 💻 Projeto
