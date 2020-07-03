@@ -1,13 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 
-const MyApp = () => {
+import '../css/styles.css'
+
+const MyApp = ({Component, pageProps}) => {
     return (
-        <div>
-            <h1>MyApp</h1>
-            <Link href="/">
-                <a href="">Home</a>
-            </Link>
+        <div className="bg-gray-200 max-w-sm w-full lg:max-w-full lg:flex">
+            <div className="">
+            <h1 className="">MyApp</h1>
+
+            <Component {...pageProps} />
+            </div>
         </div>
     )
 }
