@@ -12,17 +12,17 @@ const Header = () => {
         <ul class="flex justify-between text-2xl">
             <li class="mr-3">
             <Link href='/sobre'>
-                <a class="inline-block border border-white rounded hover:border-gray-200 text-yellow-600 hover:bg-gray-200 py-2 px-4">Sobre</a>
+                <a class="inline-block border border-white rounded hover:border-gray-200 text-yellow-600 hover:bg-gray-200 py-2 px-4 text-base sm:text-lg md:text-xl lg:text-2xl">Sobre</a>
             </Link>
             </li>
             <li class="mr-3">
             <Link href='/contato'>
-                <a class="inline-block border border-white rounded hover:border-gray-200 text-yellow-600 hover:bg-gray-200 py-2 px-4">Contato</a>
+                <a class="inline-block border border-white rounded hover:border-gray-200 text-yellow-600 hover:bg-gray-200 py-2 px-4 text-base sm:text-lg md:text-xl lg:text-2xl">Contato</a>
             </Link>
             </li>
             <li class="mr-3">
             <Link href='/pesquisa'>
-                <a class="inline-block border border-white rounded hover:border-gray-200 text-yellow-600 hover:bg-gray-200 py-2 px-4">Pesquisa</a>
+                <a class="inline-block border border-white rounded hover:border-gray-200 text-yellow-600 hover:bg-gray-200 py-2 px-4 text-base sm:text-lg md:text-xl lg:text-2xl">Pesquisa</a>
             </Link>
             </li>
         </ul>
@@ -53,22 +53,7 @@ const Header = () => {
                     </div>     
         </div>
      
-        <div className="Footer flex justify-end">  
-              <img src="/code.png"  id="modal_toggle" type="checkbox" className={styles.code} alt="code"/>             
-         </div>
 
-
-         <div className={styles.modal_container}>
-            <div className={styles.modal_backdrop}>
-                <div className={styles.modal_content}>
-                    <label className={styles.modal_close} for="modal_toggle">x</label>
-                    <h2>modal_title</h2>
-                    <hr />
-                    <p>modal_Content</p>
-                    <label className={styles.modal_close} button for="modal_toggle">Close</label>
-                </div>
-            </div>
-        </div>
 
 </>
     )

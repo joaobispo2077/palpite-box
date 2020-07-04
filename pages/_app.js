@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 import '../css/styles.css'
 
@@ -12,6 +13,7 @@ const MyApp = ({Component, pageProps}) => {
             {/* <h1 className="">MyApp</h1>
 
             <Component {...pageProps} /> */}
+            <Footer />
             </div>
         </div>
     )
