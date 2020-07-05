@@ -9,7 +9,7 @@ const Index = () => {
         <div>       
  
 
-        <div className="content flex mt-4">         
+        <div className="content flex mt-1">         
                     <div className="w-2/4">
                         <img src="/suggestions_box.svg" className={styles.caixas_svg} alt="Caixas de Sugestão"/>
                         

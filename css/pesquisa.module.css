@@ -1,27 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
-.Navbar{
-    font-size: 2rem;
+.form{
+    border-radius: .75rem;
+    /* background-color: #b2b8bd; */
+    -webkit-box-shadow: 2px 0px 17px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 0px 17px -9px rgba(0,0,0,0.75);
+    box-shadow: 2px 0px 17px -9px rgba(0,0,0,0.75);
+    padding: .6rem;
 }
-.logo{
-    height: 12rem;
-    width: 12rem;
-}
-.logo_entrar{
-    height: 1rem;
-    width: 1rem;
+
+.internalForm{
+    display: flex;
 }
 
 .h1 {
-    font-size: 2.2rem;
+    font-size: 1.75rem;
     color: #39374E;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    margin-top: 1.5rem;
+    text-align: center;
 }
-.h1Recolor{
-    color: #c9a380;
+
+
+.label, .titleField{
+    font-size: 1.1rem;
+    /* color: #39374E; */
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+   
 }
+.label{
+    margin-bottom: 40rem;
+}
+.titleField{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
+.input{
+    display: block;
+    background-color: #E5E5E5;
+}
+
+
+
+.logo{
+    height: 12rem;
+    width: 12rem;
+    text-align: center;
+}
+
+
+
 
 .p{
     line-height: 2rem;
@@ -32,8 +64,9 @@
     margin-top: 1.5rem;
     text-align: end;
 }
+
 .p2{
-    text-align: center;
+    text-align: end;
     color: #39374E;
     font-size:1rem;
     line-height: 1.5rem;
@@ -42,11 +75,13 @@
 
 }
 
+
+
 .a {
     width: 100%;
     max-width: 360px;
-    height: 72px;
-    background: #39374E;
+    height: 48px;
+    background: #ccac8b;
     border-radius: 8px;
     text-decoration: none;
     display: flex;
@@ -75,7 +110,7 @@
     height: 20px;
 }
 .ThumbsUp {
-    color: #E4C5A7;
+    color: #39374E;
     width: 40rem;
     height: 8rem;
 }
@@ -84,70 +119,11 @@
     flex: 1;
     text-align: center;
     color: #FDFDFD;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    margin: .5rem;
 }
 
 .a:hover {
-    background: #E4C5A7;
+    background: #39374E;
     transition: 1.5s;
-}
-
-
-@media(max-width: 900px) {
-
-    .h1 {
-        font-size: 1.2rem;
-        line-height: 1.2rem
-    }
-    .p {
-        font-size: 1.2rem;
-    }
-
-    .logo{
-        height: 7rem;
-        width: 7rem;
-    }
-    .logo_entrar{
-        height: 1rem;
-        width: 1rem;
-    }
- 
-
-}
-
-@media(max-width: 600px) {
-
-
-  .h1 {
-      font-size: 1.2rem;
-      line-height: 1.2rem
-  }
-  .p {
-      font-size: 1.2rem;
-  }
-  .logo{
-      height: 3.5rem;
-      width: 3.5rem;
-  }
-  .logo_entrar{
-      height: 1rem;
-      width: 1rem;
-  }
-  .strong {
-    font-size: 1rem;
-    }
-    .FiIcon {
-        color: #FFF;
-        width: 20px;
-        height: 20px;
-    }
-    .a {
-        height: 50px;
-        max-width: 200px;
-    }
-    .ThumbsUp {
-        color: #E4C5A7;
-        width: 8rem;
-        height: 8rem;
-    }
 }

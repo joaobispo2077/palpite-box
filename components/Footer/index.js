@@ -7,7 +7,7 @@ import Modal from '../Modal'
 const Footer = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
     return (
-        <div className="flex justify-end">
+        <div className="flex justify-end m-0 p-0">
             <a onClick={() => {
                     isModalVisible ? setIsModalVisible(false) : setIsModalVisible(true)
                 }}>
