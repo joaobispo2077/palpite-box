@@ -23,13 +23,23 @@
     color: #c9a380;
 }
 
-.p {
+.p{
     line-height: 2rem;
     font-size:2rem;
-    color: #cbd5e0;
+    color: #b2b8bd;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     margin-top: 1.5rem;
+    text-align: end;
+}
+.p2{
+    text-align: center;
+    color: #39374E;
+    font-size:1rem;
+    line-height: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+
 }
 
 .a {
@@ -42,9 +52,10 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    margin-top: 40px;
+    margin-top: 10px;
     cursor: pointer;
 }
+
 
 .span {
     display: block;
@@ -61,6 +72,11 @@
     color: #FFF;
     width: 20px;
     height: 20px;
+}
+.ThumbsUp {
+    color: #E4C5A7;
+    width: 40rem;
+    height: 8rem;
 }
 
 .strong {
@@ -128,5 +144,9 @@
         height: 50px;
         max-width: 200px;
     }
-
+    .ThumbsUp {
+        color: #E4C5A7;
+        width: 8rem;
+        height: 8rem;
+    }
 }
