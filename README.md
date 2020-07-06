@@ -10,6 +10,8 @@
 <p align="center">
  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=E4C5A7&labelColor=1C1C1C" alt="PRs welcome!" />
 
+
+  
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=E4C5A7&labelColor=1C1C1C">
 </p>
 <p align="center">
@@ -79,5 +81,6 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 ---
+[![HitCount](http://hits.dwyl.com/joaobispo2077/joaobispo2077/palpite-box.svg)](http://hits.dwyl.com/joaobispo2077/joaobispo2077/palpite-box)
 
 <p align="center">Feito com 💚 por <strong><a href="https://medium.com/@joaobispo2077">João Bispo 😎</a></strong> </p>

@@ -2,11 +2,12 @@
 
 .form{
     border-radius: .75rem;
-    /* background-color: #b2b8bd; */
-    -webkit-box-shadow: 2px 0px 17px -9px rgba(0,0,0,0.75);
+    background-color: rgb(254, 254, 254); 
+     -webkit-box-shadow: 2px 0px 17px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 0px 17px -9px rgba(0,0,0,0.75);
-    box-shadow: 2px 0px 17px -9px rgba(0,0,0,0.75);
+    box-shadow: 2px 0px 17px -9px rgba(0,0,0,0.75); 
     padding: .6rem;
+    height: 100%;
 }
 
 .internalForm{
@@ -39,6 +40,15 @@
 
 }
 
+/* .titleField::after{
+    display: inline-block;
+    content: "";
+    border-top: .1rem solid gray;
+    width: 95%;
+    margin: 0 .1rem;
+    transform: translateY(-1rem);
+} */
+
 .input{
     display: block;
     background-color: #E5E5E5;
@@ -55,17 +65,19 @@
 
 
 
-.p{
-    line-height: 2rem;
+.p, .pRecolor{
+    line-height: 2.75rem;
     font-size:2rem;
     color: #b2b8bd;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     margin-top: 1.5rem;
-    text-align: end;
+    text-align: start;
 }
-
-.p2{
+.pRecolor{
+    color: #c9a380;
+}
+.p2, .p2Center{
     text-align: end;
     color: #39374E;
     font-size:1rem;
@@ -74,8 +86,19 @@
     font-weight: 500;
 
 }
+.p2Center{
+    text-align: center;
+    margin: 2.5rem;
+}
 
-
+/* .p2::after{
+    display: inline-block;
+    content: "";
+    border-top: .1rem solid gray;
+    width: 100%;
+    margin: 0 .1rem;
+    transform: translateY(-1rem);
+} */
 
 .a {
     width: 100%;
@@ -87,7 +110,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    margin-top: 5px;
+    margin-top: 0px;
     cursor: pointer;
     margin-bottom: 0rem;
 }
@@ -120,10 +143,46 @@
     text-align: center;
     color: #FDFDFD;
     font-size: 1.1rem;
-    margin: .5rem;
+    margin: .75rem;
 }
 
 .a:hover {
     background: #39374E;
     transition: 1.5s;
+}
+
+.thanks_logo{
+    width: 10rem;
+    height: 4rem;
+    background-color: #171718cb;
+    border-radius: .25rem;
+}
+
+.rating {
+    overflow: hidden;
+    display: inline-block;
+}
+.rating_input {
+    float: right;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 0 0 -16px;
+    opacity: 0;
+}
+
+.rating:hover .rating_star:hover,
+.rating:hover .rating_star:hover ~ .rating_star,
+.rating_input:checked ~ .rating_star {
+    background-position: 0 0;
+}
+
+ .rating_star,
+.rating:hover .rating_star {
+  position: relative;
+    display: block;
+  float: right;
+    width: 16px;
+    height: 16px;
+    background: url('https://www.everythingfrontend.com/samples/star-rating/star.png') 0 -16px;
 }

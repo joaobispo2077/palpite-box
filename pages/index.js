@@ -23,9 +23,9 @@ const Index = () => {
                             <ThumbsUp className={styles.ThumbsUp}/>
                             <p className={styles.p}>Em troca de feedback você receberá um cupom ou uma vantagem.</p>                           
                         </div>
-                        <p className={styles.p2}>Ganhe até 10% de desconto na sua próxima compra.</p>
+                        {/* <p className={styles.p2}>Ganhe até 10% de desconto na sua próxima compra.</p> */}
                         
-                        <div className="flex justify-center">
+                        <div className="flex justify-center mt-2">
                         <Link href="/pesquisa">
                             <div  className={styles.a}>
                                 <span className={styles.span}>
