@@ -88,7 +88,7 @@
 }
 .p2Center{
     text-align: center;
-    margin: 2.5rem;
+    margin: 3rem;
 }
 
 /* .p2::after{
@@ -186,3 +186,106 @@
     height: 16px;
     background: url('https://www.everythingfrontend.com/samples/star-rating/star.png') 0 -16px;
 }
+
+
+/*Container Mother */
+
+@media (min-width: 0px) { 
+    .mother{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    }
+    .internalForm{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .p, .pRecolor{
+        line-height: 2rem;
+        font-size: 1.5rem;
+        color: #b2b8bd;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+    .pRecolor{
+        color: #c9a380;
+    }
+    .thanks_logo{
+        width: 5rem;
+        height: 2rem;
+        background-color: #171718cb;
+        border-radius: .25rem;
+    }
+    .logo{
+        height: 6rem;
+        width: 6rem;
+        text-align: center;
+    
+    }
+    .textImageContainer{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    }
+ }
+@media (min-width: 576px) { 
+    .mother{
+
+    }
+        .p, .pRecolor{
+        line-height: 2.75rem;
+        font-size:2rem;
+        color: #b2b8bd;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        margin-top: 1.5rem;
+        text-align: start;
+    }
+       .pRecolor{
+        color: #c9a380;
+    }
+    .thanks_logo{
+        width: 10.5rem;
+        height: 4rem;
+        background-color: #171718cb;
+        border-radius: .25rem;
+    }
+    .logo{
+        height: 12rem;
+        width: 12rem;
+        text-align: center;
+    }
+    .textImageContainer{
+        flex-wrap: nowrap;
+    }
+ }
+
+
+@media (min-width: 768px) { 
+    .mother{
+        
+    }
+    .internalForm{
+        
+    }
+}
+
+
+@media (min-width: 992px) { 
+    .mother{
+        
+    }
+    .internalForm{
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+ }
+
+
+@media (min-width: 1200px) { 
+    .mother{
+
+    }
+ }

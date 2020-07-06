@@ -14,6 +14,7 @@ const Modal = ({ id="modal", onClose = {}, children}) => {
                         <div className="content">{children}</div>
                 </div>
             </div>
+           
         </>
     )
 }

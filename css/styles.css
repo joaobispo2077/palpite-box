@@ -8,7 +8,7 @@
 .rating {
     overflow: hidden;
     display: inline-block;
-    justify-content: space-around;
+    /* justify-content: space-between; */
 }
 .rating-input {
     float: right;
