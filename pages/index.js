@@ -9,12 +9,12 @@ const Index = () => {
         <div>       
  
 
-        <div className="content flex mt-1">         
-                    <div className="w-2/4">
+        <div className={styles.homeContent}>         
+                    <div className="w-full sm:w-full md:w-full lg:w-2/4 xl:w-2/4">
                         <img src="/suggestions_box.svg" className={styles.caixas_svg} alt="Caixas de Sugestão"/>
                         
                     </div>
-                    <div className="flex-wrap content-center w-2/4">
+                    <div className="flex-wrap content-center w-full sm:w-full md:w-full lg:w-2/4 xl:w-2/4">
                         <div className="flex content-center">
                             <h1 className={styles.h1} >Dê a sua <span className={styles.h1Recolor}>sugestão</span>  ou opinião e receba um <span className={styles.h1Recolor}>cupom. </span></h1>
                             <img src="/logo_palpitebox.png" className={styles.logo} alt="Logomarca Palpite Box"/>                 

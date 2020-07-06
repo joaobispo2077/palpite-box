@@ -151,3 +151,34 @@
         height: 8rem;
     }
 }
+
+@media (min-width: 0px) { 
+    .homeContent{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+}
+
+@media (min-width: 576px) { 
+   
+}
+
+
+@media (min-width: 768px) { 
+
+}
+
+
+@media (min-width: 992px) { 
+    .homeContent{
+        display: flex;
+        flex-direction: row;
+        
+    }
+}
+
+
+@media (min-width: 1200px) { 
+
+}
