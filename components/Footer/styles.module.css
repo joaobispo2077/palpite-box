@@ -11,17 +11,16 @@
     border-radius: none;
     transition: .75s;
 }
-.logo{
-    width: 6rem;
-    height: 6rem;
-}
 .logo:hover{
     opacity: 60%;
     border-radius: none;
     transition: .75s;
 }
 .container_modal{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
 }
 
 .mainTitle {
@@ -35,55 +34,79 @@
     color: #c9a380;
 }
 
-.p, .p2 {
-    line-height: 1.75rem;
-    font-size:1.75rem;
-    color: #4c4e50;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    margin-top: 1.5rem;
-}
-
-.p2:hover{
-    
-}
-.hoverP{
-
-}
-.hoverP:hover{
-
-}
-
-.pRecolor{
-    color: #252729;
-    cursor: pointer;
-    outline: #252729;
-}
-
-.thanks_logo{
+/* .thanks_logo{
     width: 10rem;
     height: 4rem;
     background-color: #171718cb;
     border-radius: .25rem;
-}
+} */
 
-@media(max-width: 600px) {
-    .thanks_logo{
-        display: none;
-    }
-    .logo{
-        padding: 1rem;;
-    }
-}
 
 
 
 @media (min-width: 0px) { 
+    .p, .p2 {
+        line-height: 1rem;
+        font-size: 1rem;
+        color: #4c4e50;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        text-align: center;
+    }
 
+    .pRecolor{
+        color: #252729;
+        cursor: pointer;
+        outline: #252729;
+    }
+    .imageContainer{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .logo{
+        width: 3rem;
+        height: 3rem;
+        margin: .5rem;
+    }
+
+ }
+ @media (min-width: 400px){
+    .imageContainer{
+        flex-direction: row;
+    }
+    .logo{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    .p, .p2 {
+        line-height: 1.75rem;
+        font-size:1.75rem;
+    }
  }
 
 @media (min-width: 576px) { 
-    
+    .p, .p2 {
+        line-height: 1.75rem;
+        font-size:1.75rem;
+        color: #4c4e50;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        margin-top: 1.5rem;
+    }
+
+    .pRecolor{
+        color: #252729;
+        cursor: pointer;
+        outline: #252729;
+    }
+    .imageContainer{
+        flex-direction: row;
+    }
+    .logo{
+        width: 6rem;
+        height: 6rem;
+    }
  }
 
 

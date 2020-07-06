@@ -17,7 +17,7 @@ const Footer = () => {
             <Modal onClose={() => setIsModalVisible(false)}>
                 <div className={styles.container_modal}>
                     <h2 className={styles.p}>Essa aplicação foi desenvolvida durante a semana FullStackMaster por <span href="https://www.linkedin.com/in/joão-bispo-2077/" className={styles.pRecolor}>João Bispo</span>.</h2>
-                    <div className="flex justify-around m-8">
+                    <div className={styles.imageContainer}>
                         <a rel="prerender" href="https://github.com/joaobispo2077"><img src="/github-logo.png" className={styles.logo} alt="logo do github"/></a>
                         <a rel="prerender" href="https://www.linkedin.com/in/joão-bispo-2077/"><img src="/linkedin-logo.png" className={styles.logo} alt="logo do linkedin"/></a>                         
                         <a rel="prerender" href="https://medium.com/@joaobispo2077"><img src="/medium-logo.png" className={styles.logo} alt="logo do medium"/></a>                         
