@@ -4,6 +4,33 @@ import { ChevronsUp } from 'react-feather'
 import styles from '../css/pesquisa.module.css'
 
 const Pesquisa = () => {
+
+    const save = async () => {
+        const form = {
+            Nome: 'Pessoa teste',
+            Email: 'teste@email.com',
+            Whatsapp: '11 111111111',
+            Sugestao: 'top',
+            Nota: '5',
+            Recomendar: 'nao'
+        }
+
+        try{
+
+            const response = await fetch('./api/save', {
+                 method: 'POST',
+                 body: JSON.stringify(form)
+             })
+     
+             const data = await response.json();
+             console.log(data);
+        } catch (err) {
+            console.log(err);
+            
+        }
+        
+    }
+
     return (
     <>
     <div className={styles.mother}>
@@ -37,42 +64,42 @@ const Pesquisa = () => {
                         <h2 className={styles.titleField}>Dados</h2>
                         <div className="field">
                             <label htmlFor="" className={styles.label}>Nome:</label>
-                            <input placeholder="Digite o seu nome aqui..."  type="text" className="p-2 block border-solid border-2 border-gray-400 shadow bg-gray-200 hover:bg-white w-56 h-10 sm:w-56 md:w-56 lg:w-48 xl:w-64  my-2"/>
+                            <input placeholder="Digite o seu nome aqui..."  type="text" className="p-2 block border-solid border-2 border-gray-400 shadow bg-gray-200 hover:bg-white w-40 h-10 sm:w-56 md:w-56 lg:w-48 xl:w-64  my-2"/>
                         </div>
                         <div className="field">
                             <label htmlFor="" className={styles.label}>E-mail:</label>
-                            <input placeholder="Digite o seu E-mail aqui..."  type="email" className="p-2 block border-solid border-2 border-gray-400 shadow bg-gray-200 hover:bg-white w-56 h-10 sm:w-56 md:w-56 lg:w-48 xl:w-64  my-2"/>
+                            <input placeholder="Digite o seu E-mail aqui..."  type="email" className="p-2 block border-solid border-2 border-gray-400 shadow bg-gray-200 hover:bg-white w-40 h-10 sm:w-56 md:w-56 lg:w-48 xl:w-64  my-2"/>
                         </div>
                         <div className="field">
                             <label htmlFor="" className={styles.label}>Whatsapp:</label>
-                            <input placeholder="Digite o seu Whatsapp aqui..."  type="text" className="p-2 block border-solid border-2 border-gray-400 shadow bg-gray-200 hover:bg-white w-56 h-10 sm:w-56 md:w-56 lg:w-48 xl:w-64  my-2"/>
+                            <input placeholder="Digite o seu Whatsapp aqui..."  type="text" className="p-2 block border-solid border-2 border-gray-400 shadow bg-gray-200 hover:bg-white w-40 h-10 sm:w-56 md:w-56 lg:w-48 xl:w-64  my-2"/>
                         </div>
                     </fieldset>
                     <fieldset className="p-2">
                         <h2 className={styles.titleField}>Feedback</h2>
                         <div className="field">
                             <label htmlFor="" className={styles.label}>Sugestão ou opinião:</label>
-                            <input rows="2" cols="20"  placeholder="Digite a sua sugestão/opinião aqui..."  type="text" className="p-4 block border-solid border-2 border-gray-400 shadow bg-gray-200 hover:bg-white w-56 h-10 sm:w-56 md:w-56 lg:w-48 xl:w-56 my-2"/>
+                            <input rows="2" cols="20"  placeholder="Digite a sugestão/opinião aqui..."  type="text" className="p-4 block border-solid border-2 border-gray-400 shadow bg-gray-200 hover:bg-white w-40 h-10 sm:w-56 md:w-56 lg:w-48 xl:w-56 my-2"/>
                         </div>
                         <div className="mt-4">
-                            <label htmlFor="" className={styles.label}>Nota do estabelecimento:</label>
+                            <label htmlFor="" className={styles.label}>Nota para o estabelecimento:</label>
                             <div className="">
-                                <span class="rating my-2">
-                                    <input type="radio" class="rating-input"
+                                <span className="rating my-2">
+                                    <input type="radio" className="rating-input"
                                         id="rating-input-1-5" name="rating-input-1"/>
-                                    <label for="rating-input-1-5" class="rating-star mx-3"></label>
-                                    <input type="radio" class="rating-input"
+                                    <label for="rating-input-1-5" className="rating-star mx-2"></label>
+                                    <input type="radio" className="rating-input"
                                         id="rating-input-1-4" name="rating-input-1"/>
-                                    <label for="rating-input-1-4" class="rating-star mx-3"></label>
-                                    <input type="radio" class="rating-input"
+                                    <label for="rating-input-1-4" className="rating-star mx-2"></label>
+                                    <input type="radio" className="rating-input"
                                         id="rating-input-1-3" name="rating-input-1"/>
-                                    <label for="rating-input-1-3" class="rating-star mx-3"></label>
-                                    <input type="radio" class="rating-input"
+                                    <label for="rating-input-1-3" className="rating-star mx-2"></label>
+                                    <input type="radio" className="rating-input"
                                         id="rating-input-1-2" name="rating-input-1"/>
-                                    <label for="rating-input-1-2" class="rating-star mx-3"></label>
-                                    <input type="radio" class="rating-input"
+                                    <label for="rating-input-1-2" className="rating-star mx-2"></label>
+                                    <input type="radio" className="rating-input"
                                         id="rating-input-1-1" name="rating-input-1"/>
-                                    <label for="rating-input-1-1" class="rating-star mx-3"></label>
+                                    <label for="rating-input-1-1" className="rating-star mx-2"></label>
                                 </span>
                             </div>
                         </div>
@@ -93,7 +120,7 @@ const Pesquisa = () => {
                     </fieldset>
                  </div>
                  <div className="flex justify-center">
-                        <button>
+                        <button onClick={save}>
                             <div  className={styles.a}>
                                     <span className={styles.span}>
                                         <ChevronsUp className={styles.FiIcon}  />

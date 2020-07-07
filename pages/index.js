@@ -1,12 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 import { LogIn, ThumbsUp } from 'react-feather'
+import useSWR from 'swr'
 
 import styles from '../css/index.module.css'
-
+const fetcher = (...args) => fetch(...args).then(res => res.json());
 const Index = () => {
+    
+    const {data, error} = useSWR('api/get-promo', fetcher);
     return (
         <div>       
+        {/* (<pre>{JSON.stringify(data)}</pre>) */}
  
 
         <div className={styles.homeContent}>         
@@ -23,8 +27,9 @@ const Index = () => {
                             <ThumbsUp className={styles.ThumbsUp}/>
                             <p className={styles.p}>Em troca de feedback você receberá um cupom ou uma vantagem.</p>                           
                         </div>
-                        {/* <p className={styles.p2}>Ganhe até 10% de desconto na sua próxima compra.</p> */}
-                        
+                        { !data && <p className={styles.p2}>Carregando...</p>}
+                        { !error && data &&  data.showCupom && <p className={styles.p2}>{data.message}</p>}
+
                         <div className="flex justify-center mt-2">
                         <Link href="/pesquisa">
                             <div  className={styles.a}>
