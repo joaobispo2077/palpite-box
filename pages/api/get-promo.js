@@ -1,12 +1,19 @@
 
 import { GoogleSpreadsheet } from 'google-spreadsheet';
-import credentials from '../../credentials.json';
+// import credentials from '../../credentials.json'; Dev
+import { fromBase64 } from '../../utils/base64.js'
 
-const doc = new GoogleSpreadsheet('1AWQOhZjwzKgbK8QZP3PtgR8HnQBe-juf0Hg--t22uII');
+const doc = new GoogleSpreadsheet(process.env.SHEET_DOC_ID);
+
+
 
 export default async (req, res) => {
     try{
-        await doc.useServiceAccountAuth(credentials);
+        //await doc.useServiceAccountAuth(credentials);
+        await doc.useServiceAccountAuth({
+            client_email: process.env.SHEET_CLIENT_EMAIL,
+            private_key: fromBase64(process.env.SHEET_PRIVATE_KEY)
+        });
         await doc.loadInfo()
         console.log(doc.title);
         

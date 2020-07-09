@@ -75,7 +75,7 @@
     height: 20px;
 }
 .ThumbsUp {
-    color: #E4C5A7;
+    color: #c9a380;
     width: 40rem;
     height: 8rem;
 }
@@ -88,7 +88,7 @@
 }
 
 .a:hover {
-    background: #E4C5A7;
+    background: #c9a380;
     transition: 1.5s;
 }
 
@@ -146,7 +146,7 @@
         max-width: 200px;
     }
     .ThumbsUp {
-        color: #E4C5A7;
+        color: #c9a380;
         width: 8rem;
         height: 8rem;
     }

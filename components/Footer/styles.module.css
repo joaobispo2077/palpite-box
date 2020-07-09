@@ -21,6 +21,7 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    background-size: cover;
 }
 
 .mainTitle {
@@ -80,8 +81,8 @@
         height: 4.5rem;
     }
     .p, .p2 {
-        line-height: 1.75rem;
-        font-size:1.75rem;
+        line-height: 1.25rem;
+        font-size:1.25rem;
     }
  }
 
@@ -123,3 +124,20 @@
 @media (min-width: 1200px) { 
 
  }
+
+@media (min-height: 0px){
+    .p2, .logo{
+        display: none;
+    }
+}
+@media (min-height: 350px){
+
+    .logo{
+        display: inline-block;
+    }
+}
+@media (min-height: 501px){
+    .p2{
+        display: inline-block;
+    }
+}

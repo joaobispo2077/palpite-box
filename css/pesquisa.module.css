@@ -200,6 +200,13 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
+
+    .space{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
     .p, .pRecolor{
         line-height: 2rem;
         font-size: 1.5rem;
@@ -215,7 +222,7 @@
     .thanks_logo{
         width: 5rem;
         height: 2rem;
-        background-color: #171718cb;
+        background-color: #1A202C;
         border-radius: .25rem;
     }
     .logo{
@@ -230,6 +237,7 @@
         flex-wrap: wrap-reverse;
     }
  }
+
 @media (min-width: 576px) { 
     .mother{
 
@@ -289,3 +297,47 @@
 
     }
  }
+
+ .containerCupom{
+    margin: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid #39374E;
+    padding: 1.5rem;
+}
+
+.discount{
+    text-align: center;
+    color: rgb(26, 24, 24);
+    font-weight: 300;
+}
+.p2Cupom{
+    text-align: center;
+    color: rgb(26, 24, 24);
+    font-size:1rem;
+    line-height: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.pCupom{
+    line-height: 2.75rem;
+    font-size:2rem;
+    color: #b2b8bd;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-top: 0;
+    text-align: center;
+}
+
+.p2CenterCupom{
+    text-align: center;
+    color: #39374E;
+    font-size:1rem;
+    line-height: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+
+}

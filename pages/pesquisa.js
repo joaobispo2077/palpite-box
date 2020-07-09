@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ChevronsUp } from 'react-feather'
 import styles from '../css/pesquisa.module.css'
+import PageTitle from "../components/Layout/pageTitle";
 
 const Pesquisa = () => {
     const [form, setForm] = useState({
@@ -49,6 +50,7 @@ const Pesquisa = () => {
     }
     return (
     <>
+    <PageTitle title="Pesquisa"/>
     <div className={styles.mother}>
      
 
@@ -94,47 +96,49 @@ const Pesquisa = () => {
                             </div>
                         </fieldset>
                         <fieldset className="p-2">
-                            <h2 className={styles.titleField}>Feedback</h2>
-                            <div className="field">
-                                <label htmlFor="" className={styles.label}>Sugestão ou opinião:</label>
-                                <input onChange={onChange} name="Sugestao" value={form.Sugestao} rows="2" cols="20"  placeholder="Digite a sugestão/opinião aqui..."  type="text" className="p-4 block border-solid border-2 border-gray-400 shadow bg-gray-200 hover:bg-white w-40 h-10 sm:w-56 md:w-56 lg:w-48 xl:w-56 my-2"/>
-                            </div>
-                            <div className="mt-4">
-                                <label htmlFor="" className={styles.label}>Nota para o estabelecimento:</label>
-                                <div className="">
-                                    <span className="rating my-2">
-                                        <input type="radio" className="rating-input"
-                                            id="rating-input-1-5" name="Nota" value="5" onChange={onChange}/>
-                                        <label htmlFor="rating-input-1-5" className="rating-star mx-2"></label>
-                                        <input type="radio" className="rating-input"
-                                            id="rating-input-1-4" name="Nota"   value="4" onChange={onChange}/>
-                                        <label htmlFor="rating-input-1-4" className="rating-star mx-2"></label>
-                                        <input type="radio" className="rating-input"
-                                            id="rating-input-1-3" name="Nota"   value="3" onChange={onChange}/>
-                                        <label htmlFor="rating-input-1-3" className="rating-star mx-2"></label>
-                                        <input type="radio" className="rating-input"
-                                            id="rating-input-1-2" name="Nota"   value="2" onChange={onChange}/>
-                                        <label htmlFor="rating-input-1-2" className="rating-star mx-2"></label>
-                                        <input type="radio" className="rating-input"
-                                            id="rating-input-1-1" name="Nota"   value="1" onChange={onChange}/>
-                                        <label htmlFor="rating-input-1-1" className="rating-star mx-2"></label>
-                                    </span>
+                            <div className={styles.space}>                         
+                                <h2 className={styles.titleField}>Feedback</h2>
+                                <div className="field flex-col justify-around">
+                                    <label htmlFor="" className={styles.label}>Sugestão ou opinião:</label>
+                                    <input onChange={onChange} name="Sugestao" value={form.Sugestao} rows="2" cols="20"  placeholder="Digite a sugestão/opinião aqui..."  type="text" className="p-2 block border-solid border-2 border-gray-400 shadow bg-gray-200 hover:bg-white w-40 h-10 sm:w-56 md:w-56 lg:w-48 xl:w-56 my-2"/>
                                 </div>
                             </div>
-                            <div className="my-4">
-                                <label htmlFor="" className={styles.label}>Indicaria para um amigo?</label>
-                                <div className="flex justify-around my-2">
-                                    <div>
-                                        <input className="cursor-pointer" type="radio"  id="Sim" onChange={onChange} name="Recomendar" value="Sim" onChange={onChange}/>
-                                        <label className="mx-2 cursor-pointer" htmlFor="Sim">Sim</label>
+                                <div className="mt-4">
+                                    <label htmlFor="" className={styles.label}>Nota para o estabelecimento:</label>
+                                    <div className="">
+                                        <span className="rating my-2">
+                                            <input type="radio" className="rating-input"
+                                                id="rating-input-1-5" name="Nota" value="5" onChange={onChange}/>
+                                            <label htmlFor="rating-input-1-5" className="rating-star mx-2"></label>
+                                            <input type="radio" className="rating-input"
+                                                id="rating-input-1-4" name="Nota"   value="4" onChange={onChange}/>
+                                            <label htmlFor="rating-input-1-4" className="rating-star mx-2"></label>
+                                            <input type="radio" className="rating-input"
+                                                id="rating-input-1-3" name="Nota"   value="3" onChange={onChange}/>
+                                            <label htmlFor="rating-input-1-3" className="rating-star mx-2"></label>
+                                            <input type="radio" className="rating-input"
+                                                id="rating-input-1-2" name="Nota"   value="2" onChange={onChange}/>
+                                            <label htmlFor="rating-input-1-2" className="rating-star mx-2"></label>
+                                            <input type="radio" className="rating-input"
+                                                id="rating-input-1-1" name="Nota"   value="1" onChange={onChange}/>
+                                            <label htmlFor="rating-input-1-1" className="rating-star mx-2"></label>
+                                        </span>
                                     </div>
-                                    <div>
-                                        <input className="cursor-pointer" type="radio"  id="Não" onChange={onChange} name="Recomendar" value="Não" onChange={onChange}/>
-                                        <label className="mx-2 cursor-pointer" htmlFor="Não">Não</label>
-                                    </div>
+                                </div>
+                                <div className="my-4">
+                                    <label htmlFor="" className={styles.label}>Indicaria para um amigo?</label>
+                                    <div className="flex justify-around my-2">
+                                        <div>
+                                            <input className="cursor-pointer" type="radio"  id="Sim" onChange={onChange} name="Recomendar" value="Sim" onChange={onChange}/>
+                                            <label className="mx-2 cursor-pointer" htmlFor="Sim">Sim</label>
+                                        </div>
+                                        <div>
+                                            <input className="cursor-pointer" type="radio"  id="Não" onChange={onChange} name="Recomendar" value="Não" onChange={onChange}/>
+                                            <label className="mx-2 cursor-pointer" htmlFor="Não">Não</label>
+                                        </div>
 
-                                </div>
-                            </div>
+                                    </div>
+                                </div>                            
                         </fieldset>
                     </div>
                     <div className="flex justify-center">              
@@ -151,19 +155,20 @@ const Pesquisa = () => {
                 }
                 {success && 
                     <div>
-                        <h1 className={styles.h1}>Obrigado pela crítica ou sugestão enviada.</h1>
-                        <p className={styles.p2}>Empenharemos esforços para que possamos melhorar com os feedbacks fornecidos por você =D</p>
+                        <div className="p-8">
+                        <h1 className={styles.h1}>Obrigado pela crítica ou sugestão.</h1>
+                        <p className={styles.p2Cupom}>Empenharemos esforços para que possamos melhorar com os feedbacks fornecidos por você =D</p>
+                        </div>
                         { 
-                            retorno.showCupom && <div> 
-                                <p>Seu cupom:</p> 
-                                <span> {retorno.Cupom} </span>
+                            retorno.showCupom && 
+                            <div className={styles.containerCupom}> 
+                                <p className={styles.pCupom}>Seu cupom:</p> 
+                                <span className={styles.h1}> {retorno.Cupom} </span>
 
-                                <span> {JSON.stringify(retorno.Promo)}</span>
-
-
-                                <span>Tire um print ou uma foto desta tela e apresente à algum funcionário.</span>
+                                <span className={styles.discount}> {JSON.stringify(retorno.Promo)}</span>
+                                <span className={styles.p2CenterCupom}>Tire um print ou uma foto desta tela e apresente aos nossos funcionários.</span>
                                  
-                                </div> 
+                            </div> 
                         }
                     </div>
                 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { LogIn, ThumbsUp } from 'react-feather'
+import PageTitle from '../components/Layout/pageTitle.js'
 import useSWR from 'swr'
 
 import styles from '../css/index.module.css'
@@ -12,7 +13,7 @@ const Index = () => {
         <div>       
         {/* (<pre>{JSON.stringify(data)}</pre>) */}
  
-
+        <PageTitle title="Seja bem-vindo"/>
         <div className={styles.homeContent}>         
                     <div className="w-full sm:w-full md:w-full lg:w-2/4 xl:w-2/4">
                         <img src="/suggestions_box.svg" className={styles.caixas_svg} alt="Caixas de Sugestão"/>
@@ -27,8 +28,8 @@ const Index = () => {
                             <ThumbsUp className={styles.ThumbsUp}/>
                             <p className={styles.p}>Em troca de feedback você receberá um cupom ou uma vantagem.</p>                           
                         </div>
-                        { !data && <p className={styles.p2}>Carregando...</p>}
-                        { !error && data &&  data.showCupom && <p className={styles.p2}>{data.message}</p>}
+                        {/* { !data && <p className={styles.p2}>Carregando...</p>}
+                        { !error && data &&  data.showCupom && <p className={styles.p2}>{data.message}</p>} */}
 
                         <div className="flex justify-center mt-2">
                         <Link href="/pesquisa">
