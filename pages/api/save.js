@@ -1,7 +1,14 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import credentials from '../../credentials.json';
+import moment from 'moment';
 
 const doc = new GoogleSpreadsheet('1AWQOhZjwzKgbK8QZP3PtgR8HnQBe-juf0Hg--t22uII');
+
+const genCupom = () => {
+   const code = parseInt(moment().format('YYMMDDHHmmssSSS')).toString(16).toUpperCase()
+    return code.substr(0,4) + '-' + code.substr(4,4) + '-' + code.substr(8,4)
+}  
+
 
 export default async(req, res) => {
 
@@ -34,7 +41,7 @@ export default async(req, res) => {
         let Promo = '';
 
         if (mostrarPromocao.value === "VERDADEIRO") {
-            Cupom = 'temp'
+            Cupom = genCupom()
             Promo = texto.value
         }
       
@@ -45,10 +52,15 @@ export default async(req, res) => {
             Cupom,
             Promo,
             Sugestao: data.Sugestao,
-            Nota: data.Nota,
+            Nota: parseInt(data.Nota),
             Recomendar: data.Recomendar,
+            'Data Preenchimento': moment().format('MM/DD/YYYY HH:mm:ss')
         });
-        res.end(req.body);
+        res.end(JSON.stringify({
+            showCupom: Cupom !== '',
+            Cupom,
+            Promo
+        }));
 
     } catch (err){
         console.log(err);
